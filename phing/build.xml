@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="ru.fractalizer.phpImageBatch" default="make-phar-packages" basedir=".." >
+
+    <target name="make-phar-packages" description="Make autoloading phar archives">
+        <pharpackage
+                destfile="phar/phpImageBatch.phar"
+                basedir="src"
+                stub="phing/stub.php"
+                alias="phpImageBatch">
+            <fileset dir="src">
+                <include name="**/**"/>
+            </fileset>
+            <metadata>
+                <element name="version" value="1.0"/>
+                <element name="authors">
+                    <element name="Vladislav Rastrusny">
+                        <element name="e-mail" value="FractalizeR@yandex.ru"/>
+                    </element>
+                </element>
+            </metadata>
+        </pharpackage>
+
+        <pharpackage
+                destfile="phar/phpImageBatch.phar.gz"
+                basedir="src"
+                stub="phing/stub.php"
+                alias="phpImageBatch"
+                compression="gzip">
+            <fileset dir="src">
+                <include name="**/**"/>
+            </fileset>
+            <metadata>
+                <element name="version" value="1.0"/>
+                <element name="authors">
+                    <element name="Vladislav Rastrusny">
+                        <element name="e-mail" value="FractalizeR@yandex.ru"/>
+                    </element>
+                </element>
+            </metadata>
+        </pharpackage>
+
+        <pharpackage
+                destfile="phar/phpImageBatch.phar.bz2"
+                basedir="src"
+                stub="phing/stub.php"
+                alias="phpImageBatch"
+                compression="bzip2">
+            <fileset dir="src">
+                <include name="**/**"/>
+            </fileset>
+            <metadata>
+                <element name="version" value="1.0"/>
+                <element name="authors">
+                    <element name="Vladislav Rastrusny">
+                        <element name="e-mail" value="FractalizeR@yandex.ru"/>
+                    </element>
+                </element>
+            </metadata>
+        </pharpackage>
+    </target>
+
+</project>
