@@ -96,10 +96,11 @@ class LogoStamp implements Processor {
      * Stamps the logo into the given image
      *
      * @throws StampException
-     * @param \phpImageBatch\Image\Image $image Image on which to stamp the logo
+     * @param string $filename Filename of the image on which to stamp the logo
      * @return void
      */
-    public function process(Image $image) {
+    public function process($filename) {
+        $image = Image::createFromFile($filename);
 
         //Resizing logo
         switch ($this->logoResizeMode) {
@@ -150,6 +151,7 @@ class LogoStamp implements Processor {
         }
 
         $logo->copyTo($image, $x, $y);
+        $image->saveToFile($filename);
     }
 
     /**

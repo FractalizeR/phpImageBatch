@@ -77,9 +77,7 @@ class RecursiveDirectoryBatch {
 
             $this->backuper->backup($filePathname);
             try {
-                $image = Image::createFromFile($filePathname);
-                $this->stamper->process($image);
-                $image->saveToFile($filePathname);
+                $this->stamper->process($filePathname);
                 clearstatcache();
                 $this->marker->markProcessed($filePathname);
             } catch (\Exception $e) {

@@ -28,11 +28,11 @@ use phpImageBatch\Image\Image;
 interface Processor {
 
     /**
-     * Applies needed operations to the given image
+     * Applies needed operations to the given file
      *
      * @abstract
      * @return void
-     * @param \phpImageBatch\Image\Image $image
+     * @param string $filename
      */
-    function process(Image $image);
+    function process($filename);
 }
