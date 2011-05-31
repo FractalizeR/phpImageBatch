@@ -4,7 +4,7 @@ Phar files
 What is this?
 ---------------------------------------
 
-This directory contains phpLogoStamp phar archive files. Phars are self-sufficient
+This directory contains phpImageBatch phar archive files. Phars are self-sufficient
 and contain all the library files in it. You can use them alone without anything else.
 
 The only difference between three of them is compression.
@@ -19,7 +19,7 @@ Where to get?
 ---------------------------------------
 
 You can download most recent library phar files from project download area
-http://github.com/FractalizeR/phpLogoStamp/archives/master
+http://github.com/FractalizeR/phpImageBatch/archives/master
 
 Or you can use Phing to build them yourself. To do this please read README file in the phing directory.
 
@@ -28,7 +28,7 @@ Usage
 
 ```php
 <?php
-require_once("phpLogoStamp.phar');
+require_once("phpImageBatch.phar');
 $fileMasks = array('*.jpg', '*.png', '*.gif');
 $logo = Image::createFromFile((__DIR__ . '/logo.jpg'));
 $stamper = new SimpleStamp($logo);

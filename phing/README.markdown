@@ -2,7 +2,7 @@ Building using Phing
 =======================================
 
 This directory contains phing build file, that can be used to execute tests
-and to build phpLogoStamp phar files.
+and to build phpImageBatch phar files.
 
 If you don't know what is phing, read this: http://www.phing.info/docs/guide/stable/
 
@@ -18,7 +18,7 @@ pear install phing/phing
 After this build process can be run like this:
 
 ```
-Z:\Denwer\usr\local\php5\PEAR\phing.bat -f Z:/Work/PHP/phpLogoStamp/phing/build.xml make-phar-package
+Z:\Denwer\usr\local\php5\PEAR\phing.bat -f Z:/Work/PHP/phpImageBatch/phing/build.xml make-phar-package
 ```
 
 Phing targets
